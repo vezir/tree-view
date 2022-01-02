@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<style>
+/* Remove default bullets */
+ul, #myUL {
+  list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<ul id="myUL">
+ <li><span class="caret">1</span>
+  <ul class="nested">
+  <li><span class="caret">4</span>
+   <ul class="nested">
+    <li>10</li>
+   <li><span class="caret">11</span>
+    <ul class="nested">
+     <li>16</li>
+    <li><span class="caret">17</span>
+     <ul class="nested">
+      <li>24</li>
+      <li>25</li>
+     </ul>
+    </li>
+    </ul>
+   </li>
+     <li>122</li>
+   </ul>
+  </li>
+   <li><span class="caret">5</span>
+    <ul class="nested">
+     <li>8</li>
+    <li><span class="caret">9</span>
+     <ul class="nested">
+      <li>7</li>
+     <li><span class="caret">12</span>
+      <ul class="nested">
+       <li>22</li>
+      <li><span class="caret">23</span>
+       <ul class="nested">
+        <li>2</li>
+        <li>26</li>
+        <li>27</li>
+       </ul>
+      </li>
+      </ul>
+     </li>
+       <li>20</li>
+       <li>21</li>
+     </ul>
+    </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<script>
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+</script>
+</body>
+</html>
