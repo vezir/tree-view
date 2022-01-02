@@ -1,0 +1,108 @@
+{
+    "1": {
+        "4": {
+            "10": {},
+            "11": {
+                "16": {},
+                "17": {
+                    "24": {},
+                    "25": {}
+                }
+            },
+            "122": {}
+        },
+        "5": {
+            "8": {},
+            "9": {
+                "7": {},
+                "12": {
+                    "22": {},
+                    "23": {
+                        "2": {},
+                        "26": {},
+                        "27": {}
+                    }
+                },
+                "20": {},
+                "21": {}
+            }
+        }
+    }
+}
+
+1:
+ | 4:
+ | | 10:
+ | | 11:
+ | | | 16:
+ | | | 17:
+ | | | | 24:
+ | | | | 25:
+ | | |
+ | |
+ | | 122:
+ |
+ | 5:
+ | | 8:
+ | | 9:
+ | | | 7:
+ | | | 12:
+ | | | | 22:
+ | | | | 23:
+ | | | | | 2:
+ | | | | | 26:
+ | | | | | 27:
+ | | | |
+ | | |
+ | | | 20:
+ | | | 21:
+ | |
+ |
+
+
+<ul id="myUL">
+ <li><span class="caret">1</span>
+  <ul class="nested">
+  <li><span class="caret">4</span>
+   <ul class="nested">
+    <li>10</li>
+   <li><span class="caret">11</span>
+    <ul class="nested">
+     <li>16</li>
+    <li><span class="caret">17</span>
+     <ul class="nested">
+      <li>24</li>
+      <li>25</li>
+     </ul>
+    </li>
+    </ul>
+   </li>
+     <li>122</li>
+   </ul>
+  </li>
+   <li><span class="caret">5</span>
+    <ul class="nested">
+     <li>8</li>
+    <li><span class="caret">9</span>
+     <ul class="nested">
+      <li>7</li>
+     <li><span class="caret">12</span>
+      <ul class="nested">
+       <li>22</li>
+      <li><span class="caret">23</span>
+       <ul class="nested">
+        <li>2</li>
+        <li>26</li>
+        <li>27</li>
+       </ul>
+      </li>
+      </ul>
+     </li>
+       <li>20</li>
+       <li>21</li>
+     </ul>
+    </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
